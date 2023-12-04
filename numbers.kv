@@ -1,0 +1,56 @@
+Number_systems:
+<Number_systems>:
+    cols:1
+    MDTopAppBar:
+        size_hint:1,.08
+        padding:"5dp"
+        elevation:0
+        md_bg_color:app.theme_cls.primary_color
+
+    GridLayout:
+        cols:1
+        BoxLayout:
+            spacing:"50dp"
+            padding:"20dp"
+            MDRaisedButton:
+                id:menu_from
+                text:"From"
+                elevation:1
+                on_release:root.dropdown_from()
+            MDRaisedButton:
+                id:menu_to
+                text:"To"
+                elevation:1
+                on_release:root.dropdown_to()
+        BoxLayout:
+            padding:"30dp"
+            spacing:"50dp"
+            MDTextField:
+                id:value
+                hint_text:"enter the number"
+                mode:"rectangle"
+                icon_right:"numeric-1-circle"
+                line_color_normal:"black"
+            MDFloatingActionButton:
+                text:"convert"
+                icon:"calculator"
+                elevation:3
+                on_press:root.convert()
+
+        BoxLayout:
+            padding:"30dp"
+            spacing:"50dp"
+            MDLabel:
+                text:"Result"
+                color:"black"
+                font_size:18
+            MDLabel:
+                id:result_label
+                font_size:18
+
+
+
+
+
+
+
